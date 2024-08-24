@@ -16,3 +16,13 @@ void changeDirectory();
 void displayDirectoryMenu();
 void handleDirectorySelection(int choice);
 void exitProgram();
+
+int main() {
+    int choice;
+    do {
+        displayMainMenu();
+        std::cin >> choice;
+        handleMainMenuSelection(choice);
+    } while (choice != 4); // 4 is the exit option
+    return 0;
+}
