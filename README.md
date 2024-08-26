@@ -139,4 +139,38 @@ void showFileListMenu() {
         }
     } while (fileChoice < 1 || fileChoice > 3);  
 }
+int main() {
+    int choice;
+
+    do {
+        cout << "MAIN MENU\n";
+        cout << "--------------------\n";
+        cout << "1. Display List of Files\n";
+        cout << "2. Create New Directory\n";
+        cout << "3. Change the Working Directory\n";
+        cout << "4. Exit\n";
+        cout << "Enter the Number: ";
+        cin >> choice;
+        cin.ignore();  
+        switch (choice) {
+            case 1:
+                showFileListMenu(); 
+                break;
+            case 2:
+                create_directory();
+                break;
+            case 3:
+                change_directory();
+                break;
+            case 4:
+                cout << "Exiting...\n";
+                break;
+            default:    
+                cout << "Invalid choice. Please try again.\n";
+                break;
+        }
+    } while (choice != 4);
+
+    return 0; 
+}
 
